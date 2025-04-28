@@ -29,8 +29,10 @@
   --color-main-text: #000;
   --color-sub-text: #A7A7A9;
 
-  --font-Vazir:'Vazir';
-  --font-Dirooz:'Dirooz';
+  --font-Vazir: 'Vazir';
+  --font-Dirooz: 'Dirooz';
+
+  --container-8xl: 1320px;
 }
 
 body {

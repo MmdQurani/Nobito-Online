@@ -11,11 +11,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
+
+        <div className="container w-8xl min-h-dvh bg-amber-400 mx-auto">
+          <Header />
+          <main>
+            {children}
+            <span className='font-bold text-wrap'>
+              loremmmmmmm mmmmm mmmmmmmmmm mmmmmm mmmmmmmmm mmmmmmmmmmmmmmmmm mmmmmmmmmmmmmmloremmmmmmmmmmmmmmmmmm mmmmmmmmmmmmmm mmmmmm mmmmmmmm mmmmmmmmm mmmmmmmmmmmmloremmmm mmmmmmm mmmmmmm mmmmmmmmm mmmmmmmmmm mmmmmmmmmmmmmmmmmmm mmmmmmmmmmmmloremmmmmmmmmmmm mmmmmmm mmmmmmmm mmmmmmmmmmm mmmmmmmmm mmmmmmmmmmmm mmmmmmmmm loremm mmmmmmmmm mmmmmmmm mmmmmmmmmmmmm mmmmmm mmm mmmmmmmmmmmm mmmmmmmmm mmmmmmloremmmmmmmmm mmmmmmmm mmmmmmmmmmmmmm mmmmmmmmmmmm mmmmmmmm mmmmmm mmmmmmmmmmmloremmmm mmmmmmmm mmmmmmmmmm mmmmmmmmmmm mmmmmmmmmmmmmmm mmmmmmmmmmmm mmmmmmloremmmmmmmm mmmmmmmmmm mmmmmmmmmm mmmmmmmmmmm mmmmmmmmmmmmmmmmmmm mmmmmmmmmmloremmmmmmm mmmmmmmmmmmmm mmmmmm mmmm mmmmmmmmmm mmmmm mmmmmmmmmmmmmm
+            </span>
+          </main>
+          <Footer />
+        </div>
+
       </body>
     </html>
   );
