@@ -3,7 +3,9 @@ import React from 'react'
 function Home() {
   return (
     <>
-      Home
+      <span className='font-bold'>
+      سلام دنیا
+      </span>
     </>
   )
 }
