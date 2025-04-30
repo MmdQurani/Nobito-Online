@@ -26,13 +26,21 @@
 @theme {
   --color-main-background: #F5F5F5;
   --color-btn: #1081E8;
-  --color-main-text: #000;
-  --color-sub-text: #A7A7A9;
+  --color-main-text: #0A0A0A;
+  --color-sub-text: #B1B1B1;
+  --color-primery-600: #1F7168;
 
   --font-Vazir: 'Vazir';
   --font-Dirooz: 'Dirooz';
 
-  --container-8xl: 1320px;
+  /* --container-8xl: 1320px; */
+}
+
+@layer components {
+  .container{
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 body {
