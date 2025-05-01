@@ -8,13 +8,13 @@
 @font-face {
   font-family: Vazir;
   src: url('../public/fonts/Vazir-Bold.ttf');
-  font-weight: 900;
+  font-weight: 700;
 }
 
 @font-face {
   font-family: Vazir;
   src: url('../public/fonts/Vazir-Medium.ttf');
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @font-face {

@@ -2,13 +2,17 @@ import React from 'react'
 import Link from 'next/link'
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
+import { FaInstagram } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
 
 function Header() {
   return (
-    <header className='h-36 w-full sticky top-0 mb-8 mx-auto bg-white'>
+    <header className='h-max w-full sticky top-0 mb-8 mx-auto bg-white shadow-md shadow-gray-200/60'>
 
-      <div className='container w-8xl h-full mx-auto flex flex-col'>
-        <div className='top-bar h-[70%] flex items-center'>
+      <div className='container w-8xl mx-auto flex flex-col'>
+        <div className='top-bar h-26 flex items-center'>
 
           <nav className='w-full flex flex-row justify-between items-center' dir='rtl'>
             <div className='nav-right flex flex-row items-center'>
@@ -22,7 +26,7 @@ function Header() {
             <div className='nav-left'>
 
               <ProfBtnsBox />
-              
+
               <HamburgerMenu />
 
             </div>
@@ -30,8 +34,34 @@ function Header() {
 
         </div>
 
-        <div className='bottom-bar bg-cyan-500 flex-1'>hello world</div>
-        
+        <div className='bottom-bar h-10 lg:flex hidden'>
+
+          <nav className='flex flex-row justify-between h-full w-full'>
+
+            <div className='top-link-btns-box min-h-full flex flex-row items-center flex-1 me-50'>
+              <NavbarBtn title='درباره ما' />
+              <NavbarBtn title='تماس با ما' />
+              <NavbarBtn title='سوالات متداول' />
+            </div>
+
+            <div className='Social-media-btns-box min-w-max lg:flex flex-row-reverse justify-start items-center gap-x-6 min-h-full px-2.5'>
+
+              <Link href='/'>
+                <FaInstagram className='text-2xl text-sub-text hover:text-pink-500' />
+              </Link>
+              <Link href='/'>
+                <FaTelegram className='text-2xl text-sub-text hover:text-blue-400' />
+              </Link>
+              <Link href='/'>
+                <FaLinkedin className='text-2xl text-sub-text hover:text-blue-500' />
+              </Link>
+
+            </div>
+
+          </nav>
+
+        </div>
+
       </div>
 
     </header>
@@ -60,7 +90,7 @@ export function NavbarBtnsBox() {
 
 export function NavbarBtn({ title }) {
   return (
-    <Link href='/' className='px-2.5 py-1 rounded-sm font-Dirooz font-normal text-sm hover:text-primery-600 text-sub-text'>
+    <Link href='/' className='px-2.5 py-1 rounded-sm font-Vazir font-bold text-sm hover:text-primery-600 text-sub-text'>
       {title}
     </Link>
   )
