@@ -27,6 +27,7 @@
   --color-main-background: #F5F5F5;
   --color-btn: #1081E8;
   --color-main-text: #0A0A0A;
+  --color-main-text-2: #414141;
   --color-sub-text: #B1B1B1;
   --color-primery-600: #1F7168;
 
@@ -45,4 +46,5 @@
 
 body {
   font-family: Vazir !important;
+  font-weight: normal;
 }
