@@ -48,9 +48,11 @@ function Header() {
               <Link href='/'>
                 <FaInstagram className='text-2xl text-sub-text hover:text-pink-500' />
               </Link>
+
               <Link href='/'>
                 <FaTelegram className='text-2xl text-sub-text hover:text-blue-400' />
               </Link>
+              
               <Link href='/'>
                 <FaLinkedin className='text-2xl text-sub-text hover:text-blue-500' />
               </Link>
