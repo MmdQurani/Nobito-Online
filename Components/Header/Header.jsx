@@ -5,7 +5,6 @@ import { IoMenu } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { CiLinkedin } from "react-icons/ci";
 
 function Header() {
   return (
