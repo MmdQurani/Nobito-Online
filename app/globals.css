@@ -49,3 +49,8 @@ body {
   font-weight: normal;
   /* color: rgb(41, 41, 41); */
 }
+
+input::placeholder {
+  color: var(--color-sub-text) !important;
+  font-size: 12px !important;
+}
