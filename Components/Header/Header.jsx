@@ -8,7 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Header() {
   return (
-    <header className='h-max w-full sticky top-0 mb-8 mx-auto bg-white shadow-md shadow-gray-200/60'>
+    <header className='h-max w-full sticky top-0 mb-6 mx-auto bg-white shadow-md shadow-gray-200/60'>
 
       <div className='container w-8xl mx-auto flex flex-col'>
         <div className='top-bar h-26 flex items-center'>
