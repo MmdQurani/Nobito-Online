@@ -54,3 +54,8 @@ input::placeholder {
   color: var(--color-sub-text) !important;
   font-size: 12px !important;
 }
+
+.search-input::placeholder {
+  color: var(--color-sub-text) !important;
+  font-size: 12px !important;
+}
