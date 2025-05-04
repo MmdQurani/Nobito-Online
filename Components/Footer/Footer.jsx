@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import { SlArrowLeftCircle } from "react-icons/sl";
+import { MdPhoneInTalk, MdEmail } from "react-icons/md";
+import { PiBuildingOfficeFill } from "react-icons/pi";
 
 function Footer() {
   return (
@@ -10,7 +12,9 @@ function Footer() {
         <FooterAboutUs />
         <LinksFooterBox />
 
-        <div className='Contact-addresses'>address</div>
+        <ContactAddresses />
+
+        <hr className='text-sub-text/40 my-6' />
 
         <div className='Social-media'>social media</div>
 
@@ -42,7 +46,7 @@ export function FooterAboutUs() {
 
 export function LinksFooterBox() {
   return (
-    <div className='links-footer-box w-full'>
+    <div className='links-footer-box w-full mb-12'>
       <div className='grid grid-cols-12 w-full'>
         <InputNewsBox />
         <LinksByPagesBoxInFooter />
@@ -66,7 +70,7 @@ export function InputNewsBox() {
           <button className='bg-primery-600 px-4 py-2.5 flex flex-row items-center gap-x-2 rounded-md cursor-pointer text-white'>
             <span>ارسال</span>
             <SlArrowLeftCircle className='text-xl' />
-            </button>
+          </button>
         </form>
 
         <span className='text-xs text-sub-text'>تلاش ما ارائه بهترین خدمات ممکن به شما همراهان  نوبیتو است.</span>
@@ -123,6 +127,58 @@ export function RowOfLinksItem({ title }) {
     <li className='text-sub-text hover:text-primery-600'>
       <Link href='/'>{title}</Link>
     </li>
+  )
+}
+
+export function ContactAddresses() {
+  return (
+    <div className='Contact-addresses'>
+      <div className='grid grid-cols-12' dir='rtl'>
+
+        <ContactAddressesItems />
+        <SymbolOfTrustt />
+
+      </div>
+    </div>
+  )
+}
+
+export function ContactAddressesItems() {
+  return (
+    <div className='Contact-addresses-items xl:col-span-7 md:col-span-6 col-span-12 md:m-0 mb-8 pe-8'>
+      <div className='w-full h-full flex flex-col md:justify-around md:gap-0 gap-y-8'>
+        <div className='flex flex-row items-center gap-x-2'>
+          <MdPhoneInTalk className='text-2xl text-primery-600' />
+          <span className='text-sm text-sub-text'>تماس با پشتیبانی : ۱۲۳۴۵۶۷۸-۰۲۱ | ۱۲۳۴۵۶۷۸-۰۲۱</span>
+        </div>
+        <div className='flex flex-row items-center gap-x-2'>
+          <MdEmail className='text-2xl text-primery-600' />
+          <span className='text-sm text-sub-text'>نشانی پست الکترونیک : smartix@yahoo.com</span>
+        </div>
+        <div className='flex flex-row items-center gap-x-2'>
+          <PiBuildingOfficeFill className='text-2xl text-primery-600' />
+          <span className='text-sm text-sub-text'>نشانی : تهران _ میدان آرژانتین _ خیابان لاله _ کوچه صاد _ پلاک 18</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export function SymbolOfTrustt() {
+  return (
+    <div className='Symbol-of-trust xl:col-span-5 md:col-span-6 col-span-12'>
+      <div className='w-full h-full flex flex-col gap-y-4'>
+        <div className='w-full h-full flex flex-row justify-around flex-wrap gap-2.5 gap-y-4'>
+          <img src="/images/trust/cetificate.png" width='100' alt="" />
+          <img src="/images/trust/cetificate-2.png" width='100' alt="" />
+          <img src="/images/trust/cetificate-3.png" width='100' alt="" />
+          <img src="/images/trust/cetificate-4.png" width='100' alt="" />
+        </div>
+        <div className='w-full h-full'>
+          <span className='text-sub-text text-sm leading-7'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه</span>
+        </div>
+      </div>
+    </div>
   )
 }
 

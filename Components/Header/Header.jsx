@@ -33,6 +33,8 @@ function Header() {
 
         </div>
 
+        <hr className='my-1 text-sub-text/40' />
+
         <div className='bottom-bar h-10 lg:flex hidden'>
 
           <nav className='flex flex-row justify-between h-full w-full'>
