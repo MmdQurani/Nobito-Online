@@ -3,6 +3,8 @@ import React from 'react'
 import { SlArrowLeftCircle } from "react-icons/sl";
 import { MdPhoneInTalk, MdEmail } from "react-icons/md";
 import { PiBuildingOfficeFill } from "react-icons/pi";
+import { FaInstagram, FaLinkedin, FaTelegram } from 'react-icons/fa';
+import { AiOutlineCopyright } from "react-icons/ai";
 
 function Footer() {
   return (
@@ -14,15 +16,20 @@ function Footer() {
 
         <ContactAddresses />
 
+        <div className='flex sm:hidden w-full justify-center'>
+          <SocialMediaInFooter />
+        </div>
+
         <hr className='text-sub-text/40 my-6' />
 
-        <div className='Social-media'>social media</div>
+        <CopyRight />
 
       </div>
     </footer>
   )
 }
 
+// * FooterAboutUs
 export function FooterAboutUs() {
   return (
     <div className='footer-About-us grid grid-cols-12 mb-12'>
@@ -79,7 +86,9 @@ export function InputNewsBox() {
     </div>
   )
 }
+// * FooterAboutUs
 
+// * LinksByPagesBoxInFooter
 export function LinksByPagesBoxInFooter() {
   return (
     <div className='links-by-pages-box xl:col-span-7 col-span-12 xl:order-2 order-1 mb-8'>
@@ -129,10 +138,12 @@ export function RowOfLinksItem({ title }) {
     </li>
   )
 }
+// * LinksByPagesBoxInFooter
 
+// * ContactAddresses
 export function ContactAddresses() {
   return (
-    <div className='Contact-addresses'>
+    <div className='Contact-addresses mb-12'>
       <div className='grid grid-cols-12' dir='rtl'>
 
         <ContactAddressesItems />
@@ -181,5 +192,42 @@ export function SymbolOfTrustt() {
     </div>
   )
 }
+// * ContactAddresses
+
+// * CopyRight
+export function CopyRight() {
+  return (
+    <div className='CopyRight flex flex-row justify-between flex-wrap gap-y-6 gap-x-4' dir='rtl'>
+      <div className='flex flex-row items-center gap-x-2'>
+        <AiOutlineCopyright />
+        <span className='text-xs text-sub-text'>تمامی حقوق این وبسایت متعلق به شرکت نوبیتو است</span>
+      </div>
+
+      <div className='sm:flex hidden'>
+        <SocialMediaInFooter />
+      </div>
+    </div>
+  )
+}
+
+export function SocialMediaInFooter() {
+  return (
+    <div className='Social-Media-In-Footer flex flex-row gap-x-8'>
+      <Link href='/'>
+        <FaInstagram className='text-2xl text-sub-text hover:text-pink-500' />
+      </Link>
+
+      <Link href='/'>
+        <FaTelegram className='text-2xl text-sub-text hover:text-blue-400' />
+      </Link>
+
+      <Link href='/'>
+        <FaLinkedin className='text-2xl text-sub-text hover:text-blue-500' />
+      </Link>
+    </div>
+  )
+}
+
+// * CopyRight
 
 export default Footer
