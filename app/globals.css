@@ -61,5 +61,34 @@ input::placeholder {
 }
 
 .Main-Content>div {
-  @apply mt-28
+  @apply mt-28;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  @apply shadow-md shadow-neutral-200 rounded-md border-1 border-sub-text/10;
+
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primery-600) !important;
 }

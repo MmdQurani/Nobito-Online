@@ -1,3 +1,4 @@
+import Slider from '@/Components/Slider/Slider';
 import Link from 'next/link';
 import React from 'react'
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -22,7 +23,9 @@ function Home() {
 
             <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
 
-            <div className='bg-red-500'>slider</div>
+            <div className='h-96 py-1 my-8'>
+              <Slider />
+            </div>
 
             <div className='container w-8xl mx-auto bg-blue-500'>btn</div>
 
