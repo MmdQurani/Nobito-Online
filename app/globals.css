@@ -28,8 +28,10 @@
   --color-btn: #1081E8;
   --color-main-text: #0A0A0A;
   --color-main-text-2: #414141;
+  --color-main-text-3: #757575;
   --color-sub-text: #B1B1B1;
   --color-primery-600: #1F7168;
+  --color-gray-50:#F1F1F1;
 
   --font-Vazir: 'Vazir';
   --font-Dirooz: 'Dirooz';
@@ -82,12 +84,12 @@ input::placeholder {
   align-items: center;
 }
 
-.swiper-slide img {
+/* .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 .swiper-pagination-bullet-active {
   background-color: var(--color-primery-600) !important;
