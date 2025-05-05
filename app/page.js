@@ -20,14 +20,7 @@ function Home() {
 
           <div className='Slider-Box flex flex-col'>
 
-            <div className='container w-8xl mx-auto flex flex-row justify-between items-center gap-x-2' dir='rtl'>
-              <span className='px-6 text-2xl text-main-text-2'>محبوبترین پزشکان این ماه</span>
-              <hr className='flex-1 h-[1px] text-sub-text/60' />
-              <Link href='/' className='px-2 py-1 flex flex-row items-center gap-x-2 text-sub-text'>
-                <span>مشاهده همه</span>
-                <SlArrowLeftCircle className='text-xl' />
-              </Link>
-            </div>
+            <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
 
             <div className='bg-red-500'>slider</div>
 
@@ -130,5 +123,26 @@ export function Site_Statistics_Content_Items_Box({ statistics, title }) {
   )
 }
 // * Site_Statistics
+
+// * Slider_Box
+export function Slider_Box_Title({ href = '/', title }) {
+  return (
+    // todo  به این کامپوننت همیشه باید دو پراپ ارسال شوند ، یکی تایتل و یکی روت برای کامپوننت لینک
+
+    <div className='Slider-Box-title container w-8xl mx-auto flex flex-row justify-between items-center gap-x-1' dir='rtl'>
+
+      <span className='px-2 sm:text-2xl text-lg text-main-text-2 '>{title}</span>
+
+      <hr className='sm:flex hidden flex-1 h-[1px] text-sub-text/60' />
+
+      <Link href={href} className='px-2 py-1 flex flex-row items-center gap-x-2 sm:text-sm text-xs  text-sub-text'>
+        <span>مشاهده همه</span>
+        <SlArrowLeftCircle className='sm:text-xl text-sm sm:flex hidden' />
+      </Link>
+
+    </div>
+  )
+}
+// * Slider_Box
 
 export default Home
