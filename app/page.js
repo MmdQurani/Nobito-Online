@@ -12,25 +12,7 @@ function Home() {
           <img src='/images/Banner/Banner-sm.png' className='w-full max-h-full object-contain sm:hidden flex' />
         </HeaderBanner>
 
-        <div className='Site-Statistics w-full mt-28'>
-
-          <div className='w-full h-8 flex justify-end'>
-            <Rectangle>
-              <img src='/images/Rectangle/Rectangle-6.png' className='w-full h-full' />
-            </Rectangle>
-          </div>
-
-          <div className='Site-Statistics-Content container w-8xl mx-auto my-6'>
-            hello world
-          </div>
-
-          <div className='w-full h-8 flex justify-start'>
-            <Rectangle>
-              <img src='/images/Rectangle/Rectangle-7.png' className='w-full h-full' />
-            </Rectangle>
-          </div>
-
-        </div>
+        <Site_Statistics />
 
       </div>
     </>
@@ -68,10 +50,56 @@ export function HeaderBanner({ children }) {
   )
 }
 
+export function Site_Statistics() {
+  return (
+    <div className='Site-Statistics w-full mt-28'>
+
+      <div className='w-full h-8 flex justify-end'>
+        <Rectangle>
+          <img src='/images/Rectangle/Rectangle-6.png' className='w-full h-full' />
+        </Rectangle>
+      </div>
+
+      <Site_Statistics_Content />
+
+      <div className='w-full h-8 flex justify-start'>
+        <Rectangle>
+          <img src='/images/Rectangle/Rectangle-7.png' className='w-full h-full' />
+        </Rectangle>
+      </div>
+
+    </div>
+  )
+}
+
+export function Site_Statistics_Content() {
+  return (
+    <div className='Site-Statistics-Content container w-8xl mx-auto'>
+      <div className='w-full grid grid-cols-12'>
+        <Site_Statistics_Content_Items_Box statistics='1500' title='مراکز درمانی' />
+        <Site_Statistics_Content_Items_Box statistics='1500' title='مراکز درمانی' />
+        <Site_Statistics_Content_Items_Box statistics='1500' title='مراکز درمانی' />
+        <Site_Statistics_Content_Items_Box statistics='1500' title='مراکز درمانی' />
+      </div>
+    </div>
+  )
+}
+
 export function Rectangle({ children }) {
   return (
-    <div className='min-w-2/3 max-w-[80%] h-full'>
+    <div className='min-w-8xl max-w-[80%] h-full'>
       {children}
+    </div>
+  )
+}
+
+export function Site_Statistics_Content_Items_Box({ statistics, title }) {
+  return (
+    <div className='lg:col-span-3 col-span-6 py-8 mx-6 lg:my-0 my-4'>
+      <div className='w-full h-full flex flex-col items-center justify-between gap-y-4'>
+        <span className='text-3xl text-main-text-2'>+{statistics}</span>
+        <span className='text-sm text-sub-text'>{title}</span>
+      </div>
     </div>
   )
 }
