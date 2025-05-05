@@ -1,6 +1,8 @@
+import Link from 'next/link';
 import React from 'react'
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiSearchLine } from "react-icons/ri";
+import { SlArrowLeftCircle } from "react-icons/sl";
 
 function Home() {
   return (
@@ -12,13 +14,35 @@ function Home() {
           <img src='/images/Banner/Banner-sm.png' className='w-full max-h-full object-contain sm:hidden flex' />
         </HeaderBanner>
 
-        <Site_Statistics />
+        <div className='Main-Content'>
+
+          <Site_Statistics />
+
+          <div className='Slider-Box flex flex-col'>
+
+            <div className='container w-8xl mx-auto flex flex-row justify-between items-center gap-x-2' dir='rtl'>
+              <span className='px-6 text-2xl text-main-text-2'>محبوبترین پزشکان این ماه</span>
+              <hr className='flex-1 h-[1px] text-sub-text/60' />
+              <Link href='/' className='px-2 py-1 flex flex-row items-center gap-x-2 text-sub-text'>
+                <span>مشاهده همه</span>
+                <SlArrowLeftCircle className='text-xl' />
+              </Link>
+            </div>
+
+            <div className='bg-red-500'>slider</div>
+
+            <div className='container w-8xl mx-auto bg-blue-500'>btn</div>
+
+          </div>
+
+        </div>
 
       </div>
     </>
   )
 }
 
+// * HeaderBanner
 export function HeaderBanner({ children }) {
   return (
     <div className='relative header-baner w-full'>
@@ -49,10 +73,12 @@ export function HeaderBanner({ children }) {
     </div>
   )
 }
+// * HeaderBanner
 
+// * Site_Statistics
 export function Site_Statistics() {
   return (
-    <div className='Site-Statistics w-full mt-28'>
+    <div className='Site-Statistics w-full'>
 
       <div className='w-full h-8 flex justify-end'>
         <Rectangle>
@@ -103,5 +129,6 @@ export function Site_Statistics_Content_Items_Box({ statistics, title }) {
     </div>
   )
 }
+// * Site_Statistics
 
 export default Home
