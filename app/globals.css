@@ -94,3 +94,11 @@ input::placeholder {
 .swiper-pagination-bullet-active {
   background-color: var(--color-primery-600) !important;
 }
+
+.test-text {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%; /* یا مقدار مناسب برای باکس */
+}
