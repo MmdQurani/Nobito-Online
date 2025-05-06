@@ -13,8 +13,8 @@ function Card_Slide() {
 
 export function Slide_Image({ srcImg }) {
   return (
-    <div className='slide-image'>
-      <img src="/images/Doctors/Pic.png" className='object-cover' alt="" />
+    <div className='slide-image w-full flex justify-center'>
+      <img src="/images/Doctors/Pic.png" className='object-cover w-full' alt="" />
     </div>
   )
 }

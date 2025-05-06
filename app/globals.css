@@ -82,6 +82,8 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 282px;
+  max-width: 282px;
 }
 
 /* .swiper-slide img {
@@ -94,6 +96,7 @@ input::placeholder {
 .swiper-pagination-bullet-active {
   background-color: var(--color-primery-600) !important;
 }
+
 
 .test-text {
   white-space: nowrap; 

@@ -23,7 +23,7 @@ function Home() {
 
             <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
 
-            <div className='h-96 py-1 my-8'>
+            <div className='h-96 py-1 my-8 container w-8xl mx-auto'>
               <Slider />
             </div>
 

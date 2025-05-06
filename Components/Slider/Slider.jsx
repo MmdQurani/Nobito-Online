@@ -16,13 +16,22 @@ export default function Slider() {
   return (
     <>
       <Swiper
-        slidesPerView={5}
+        breakpoints={{
+          320: { slidesPerView: 1 }, // برای موبایل کوچک
+          480: { slidesPerView: 1.5 }, // برای موبایل بزرگ‌تر
+          640: { slidesPerView: 2 }, // برای موبایل بزرگ‌تر
+          768: { slidesPerView: 2.5 }, // برای تبلت‌ها
+          1024: { slidesPerView: 3.2 },
+          1280: { slidesPerView: 4 },
+          1536: { slidesPerView: 5 },
+        }}
+
         spaceBetween={20}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper container"
+        className="mySwiper"
       >
         <SwiperSlide className='h-full'>
           <Card_Slide />
