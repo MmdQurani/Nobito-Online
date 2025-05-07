@@ -97,6 +97,12 @@ input::placeholder {
   background-color: var(--color-primery-600) !important;
 }
 
+.swiper-slide {
+  width: auto; /* یا از flex استفاده کنید */
+  flex-grow: 1;
+}
+
+
 
 .test-text {
   white-space: nowrap; 

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { MdOutlineLocationOn } from 'react-icons/md'
 
@@ -13,9 +14,9 @@ function Card_Slide() {
 
 export function Slide_Image({ srcImg }) {
   return (
-    <div className='slide-image w-full flex justify-center'>
+    <Link href='/' className='slide-image w-full flex justify-center'>
       <img src="/images/Doctors/Pic.png" className='object-cover w-full' alt="" />
-    </div>
+    </Link>
   )
 }
 
@@ -33,7 +34,7 @@ export function Slide_Body() {
 
       <Doctor_Specialty />
 
-      <hr className='my-1 text-gray-200' />
+      <hr className='my-2.5 text-gray-200' />
 
       <DoctorAddress />
 
@@ -43,7 +44,7 @@ export function Slide_Body() {
 
 export function Title_Card({ title }) {
   return (
-    <span className='title-card text-lg text-main-text-2'>محمد ابراهیمی</span>
+    <Link href='/' className='title-card text-lg text-main-text-2'>محمد ابراهیمی</Link>
   )
 }
 

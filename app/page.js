@@ -19,15 +19,13 @@ function Home() {
 
           <Site_Statistics />
 
-          <div className='Slider-Box flex flex-col'>
+          <div className='Slider-Box flex flex-col justify-between'>
 
             <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
 
-            <div className='h-96 py-1 my-8 container w-8xl mx-auto'>
+            <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
               <Slider />
             </div>
-
-            <div className='container w-8xl mx-auto bg-blue-500'>btn</div>
 
           </div>
 
@@ -138,7 +136,7 @@ export function Slider_Box_Title({ href = '/', title }) {
 
       <hr className='sm:flex hidden flex-1 h-[1px] text-sub-text/60' />
 
-      <Link href={href} className='px-2 py-1 flex flex-row items-center gap-x-2 sm:text-sm text-xs  text-sub-text'>
+      <Link href={href} className='px-2 py-1 flex flex-row items-center gap-x-2 sm:text-sm text-xs  text-sub-text hover:text-primery-600'>
         <span>مشاهده همه</span>
         <SlArrowLeftCircle className='sm:text-xl text-sm sm:flex hidden' />
       </Link>
