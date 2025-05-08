@@ -20,7 +20,7 @@ import { DataContext } from '@/Context/Context';
 
 export default function Slider() {
 
-  const { data, setData } = useContext(DataContext);
+  const { data, loading, setData } = useContext(DataContext);
   console.log(data)
 
   return (
@@ -40,30 +40,11 @@ export default function Slider() {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide className="h-full">
-            <Card_Slide />
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Card_Slide />
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Card_Slide />
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Card_Slide />
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Card_Slide />
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Card_Slide />
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Card_Slide />
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Card_Slide />
-          </SwiperSlide>
+          {data.map(doctor =>
+            <SwiperSlide className="h-full">
+              <Card_Slide {...doctor} />
+            </SwiperSlide>
+          )}
         </Swiper>
 
         {/* محل جدید برای دکمه‌های ناوبری و صفحه‌بندی */}

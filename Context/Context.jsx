@@ -5,26 +5,27 @@ import { createContext, useEffect, useState } from "react";
 // ایجاد یک Context
 export const DataContext = createContext();
 
-export const fetching_The_API = async () => {
-  const getData = await fetch('http://localhost:4000/doctors');
-  const data = await getData.json();
-  return data
-}
-
-export function DataProvider({ children }) {
-  const [data, setData] = useState([]);
+export function DataProvider({ children, initialData = null }) {
+  const [data, setData] = useState(initialData);
+  const [loading, setLoading] = useState(initialData ? false : true);
 
   useEffect(() => {
-    const fetching_The_API = async () => {
-      const getData = await fetch('http://localhost:4000/doctors');
-      const data = await getData.json();
-      setData(data);
+    if (!initialData) {
+      const fetchData = async () => {
+        try {
+          const res = await fetch("http://localhost:4000/doctors");
+          const result = await res.json();
+          setData(result);
+        } finally {
+          setLoading(false);
+        }
+      };
+      fetchData();
     }
-    fetching_The_API();
-  }, [])
+  }, [initialData]);
 
   return (
-    <DataContext.Provider value={{ data, setData }}>
+    <DataContext.Provider value={{ data, loading, setData }}>
       {children}
     </DataContext.Provider>
   );

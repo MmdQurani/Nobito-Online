@@ -3,5 +3,5 @@
 import { DataProvider } from "./Context";
 
 export default function ClientProvider({ initialData, children }) {
-  return <AppProvider initialData={initialData}>{children}</AppProvider>;
+  return <DataProvider initialData={initialData}>{children}</DataProvider>;
 }

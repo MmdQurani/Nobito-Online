@@ -1,13 +1,14 @@
+'use client'
 import Link from 'next/link'
 import React from 'react'
 import { MdOutlineLocationOn } from 'react-icons/md'
 
-function Card_Slide() {
+function Card_Slide(doctor) {
   return (
     <div className='Card-Slide h-full w-full flex flex-col justify-start gap-y-2.5 p-4'>
       <Slide_Image />
 
-      <Slide_Body />
+      <Slide_Body {...doctor} />
     </div>
   )
 }
@@ -20,48 +21,48 @@ export function Slide_Image({ srcImg }) {
   )
 }
 
-export function Slide_Body() {
+export function Slide_Body(doctor) {
   return (
     <div className='body-slide flex-1 flex flex-col justify-between' dir='rtl'>
 
       <div className='flex flex-row justify-between items-center mb-2'>
-        <Title_Card />
+        <Title_Card name={doctor.name} />
 
         <Star_Score />
       </div>
 
-      <PhysicianExpertiseAndPatientSatisfaction />
+      <PhysicianExpertiseAndPatientSatisfaction specialt={doctor.specialty} />
 
-      <Doctor_Specialty />
+      <Doctor_Specialty specialty={doctor.specialty} />
 
       <hr className='my-2.5 text-gray-200' />
 
-      <DoctorAddress />
+      <DoctorAddress address={doctor.address} />
 
     </div>
   )
 }
 
-export function Title_Card({ title }) {
+export function Title_Card({name}) {
   return (
-    <Link href='/' className='title-card text-lg text-main-text-2'>محمد ابراهیمی</Link>
+    <Link href='/' className='title-card text-lg text-main-text-2'>{name}</Link>
   )
 }
 
-export function Star_Score({ score }) {
+export function Star_Score({ score = '4/2' }) {
   return (
     <div className='Star-Score flex flex-row items-center text-xs gap-x-1'>
-      <span className='text-main-text-2/70 font-bold font-Dirooz'>4/2</span>
+      <span className='text-main-text-2/70 font-bold font-Dirooz'>{score}</span>
       <img src="/icons/star.png" className='w-[18px] h-[18px]' alt="" />
     </div>
   )
 }
 
-export function PhysicianExpertiseAndPatientSatisfaction({ satisfaction, specialty }) {
+export function PhysicianExpertiseAndPatientSatisfaction({ satisfaction = '(97%) 2374 بیمار راضی' , specialty }) {
   return (
     <div className='Physician-expertise-and-patient-satisfaction flex flex-col gap-y-4 items-start mb-2'>
-      <span className='text-sm text-sub-text font-Dirooz font-medium'>متخصص قلب و عروق</span>
-      <span className='text-sm text-primery-600 font-Dirooz font-medium'>(97%) 2374 بیمار راضی</span>
+      <span className='text-sm text-sub-text font-Dirooz font-medium'>{specialty}</span>
+      <span className='text-sm text-primery-600 font-Dirooz font-medium'>{satisfaction}</span>
     </div>
   )
 }
@@ -69,9 +70,8 @@ export function PhysicianExpertiseAndPatientSatisfaction({ satisfaction, special
 export function Doctor_Specialty({ specialty }) {
   return (
     <div className='Doctor-specialty text-xs text-main-text-3 flex flex-row justify-around'>
-      <span className='bg-gray-50 px-3 py-1 rounded-2xl cursor-pointer'>جراحی قلب</span>
+      <span className='bg-gray-50 px-3 py-1 rounded-2xl cursor-pointer'>{specialty}</span>
       <span className='bg-gray-50 px-3 py-1 rounded-2xl cursor-pointer'>آنجوگرافی</span>
-      <span className='bg-gray-50 px-3 py-1 rounded-2xl cursor-pointer'>تست ورزش</span>
     </div>
   )
 }
@@ -80,7 +80,7 @@ export function DoctorAddress({ address }) {
   return (
     <div className='Doctor-address flex flex-row items-center text-main-text-3'>
       <MdOutlineLocationOn className='text-xl' />
-      <span className='text-xs test-text'>نشانی : تهران _ میدان آرژانتین _ خیابان لاله _ کوچه صاد _ پلاک 18</span>
+      <span className='text-xs test-text'>{address}</span>
     </div>
   )
 }
