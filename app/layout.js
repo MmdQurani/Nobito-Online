@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
+import { DataProvider } from "@/Context/Context";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
           <Header />
 
           <main>
-            {children}
+            <DataProvider>
+              {children}
+            </DataProvider>
           </main>
 
           <Footer />

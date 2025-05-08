@@ -15,7 +15,14 @@ import { Navigation, Pagination } from "swiper/modules";
 import Card_Slide from '../CardSlide/CardSlide';
 import { SlArrowLeftCircle, SlArrowRightCircle } from 'react-icons/sl';
 
+import { useContext } from "react";
+import { DataContext } from '@/Context/Context';
+
 export default function Slider() {
+
+  const { data, setData } = useContext(DataContext);
+  console.log(data)
+
   return (
     <>
       <div className="relative">
