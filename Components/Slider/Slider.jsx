@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useId } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css/navigation";
@@ -21,7 +21,8 @@ import { DataContext } from '@/Context/Context';
 export default function Slider() {
 
   const { data, loading, setData } = useContext(DataContext);
-  console.log(data)
+  const uniqueId = useId();
+  console.log(uniqueId)
 
   return (
     <>
@@ -31,11 +32,11 @@ export default function Slider() {
           spaceBetween={20}
           pagination={{
             clickable: true,
-            el: ".custom-pagination" // مشخص کردن مکان جدید برای دکمه‌های pagination
+            el: `.pagination-${uniqueId}` // مشخص کردن مکان جدید برای دکمه‌های pagination
           }}
           navigation={{
-            nextEl: ".custom-next",
-            prevEl: ".custom-prev",
+            nextEl: `.next-${uniqueId}`,
+            prevEl: `.prev-${uniqueId}`,
           }}
           modules={[Pagination, Navigation]}
           className="mySwiper"
@@ -50,11 +51,11 @@ export default function Slider() {
         {/* محل جدید برای دکمه‌های ناوبری و صفحه‌بندی */}
         <div className="custom-controls mt-8 h-12 flex flex-row justify-center items-center">
           <div className='flex flex-row h-full items-center'>
-            <button className="custom-prev rounded-full p-2 border-1 text-sub-text hover:text-primery-600 hover:border-primery-600 border-sub-text cursor-pointer">
+            <button className={`prev-${uniqueId} rounded-full p-2 border-1 text-sub-text hover:text-primery-600 hover:border-primery-600 border-sub-text cursor-pointer`}>
               <SlArrowLeftCircle className='text-2xl' />
             </button>
-            <div className="custom-pagination flex items-center px-8"></div>
-            <button className="custom-next rounded-full p-2 border-1 text-sub-text hover:text-primery-600 hover:border-primery-600 border-sub-text cursor-pointer">
+            <div className={`pagination-${uniqueId} flex items-center px-8`}></div>
+            <button className={`next-${uniqueId} rounded-full p-2 border-1 text-sub-text hover:text-primery-600 hover:border-primery-600 border-sub-text cursor-pointer`}>
               <SlArrowRightCircle className='text-2xl' />
             </button>
           </div>

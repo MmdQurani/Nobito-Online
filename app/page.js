@@ -29,6 +29,16 @@ function Home() {
 
           </div>
 
+          <div className='Slider-Box flex flex-col justify-between'>
+
+            <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
+
+            <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
+              <Slider />
+            </div>
+
+          </div>
+
         </div>
 
       </div>
