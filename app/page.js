@@ -26,7 +26,7 @@ function Home() {
 
             <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
               <Slider dataKey="doctors">
-                <Card_Slide></Card_Slide>
+                <Card_Slide />
               </Slider>
             </div>
 
@@ -34,11 +34,23 @@ function Home() {
 
           <div className='Slider-Box flex flex-col justify-between'>
 
-            <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
+            <Slider_Box_Title title='مشاورین در دسترس' />
 
             <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
               <Slider dataKey="admin">
-                <Card_Slide></Card_Slide>
+                <Card_Slide />
+              </Slider>
+            </div>
+
+          </div>
+
+          <div className='Slider-Box flex flex-col justify-between'>
+
+            <Slider_Box_Title title='محبوبترین کلینیک های پزشکی' />
+
+            <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
+              <Slider dataKey="admin">
+                <Card_Slide />
               </Slider>
             </div>
 

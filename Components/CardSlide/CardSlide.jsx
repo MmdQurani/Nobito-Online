@@ -22,7 +22,6 @@ export function Slide_Image({ srcImg }) {
 }
 
 export function Slide_Body({item}) {
-  console.log(item.name)
   return (
     <div className='body-slide flex-1 flex flex-col justify-between' dir='rtl'>
 
@@ -81,7 +80,7 @@ export function DoctorAddress({ address }) {
   return (
     <div className='Doctor-address flex flex-row items-center text-main-text-3'>
       <MdOutlineLocationOn className='text-xl' />
-      <span className='text-xs test-text'>{address}</span>
+      <span className='text-xs no_wrap_text'>{address}</span>
     </div>
   )
 }

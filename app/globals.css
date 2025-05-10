@@ -63,7 +63,7 @@ input::placeholder {
 }
 
 .Main-Content>div {
-  @apply mt-28;
+  @apply mt-24;
 }
 
 .swiper {
@@ -115,7 +115,7 @@ input::placeholder {
 
 
 
-.test-text {
+.no_wrap_text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
