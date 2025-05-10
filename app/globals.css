@@ -63,7 +63,7 @@ input::placeholder {
 }
 
 .Main-Content>div {
-  @apply mt-24;
+  @apply my-26;
 }
 
 .swiper {

@@ -1,3 +1,4 @@
+import Banner_Box from '@/Components/Banner_Box/Banner_Box';
 import Card_Slide from '@/Components/CardSlide/CardSlide';
 import Slider from '@/Components/Slider/Slider';
 import Link from 'next/link';
@@ -20,6 +21,7 @@ function Home() {
 
           <Site_Statistics />
 
+          {/* Slider-Box */}
           <div className='Slider-Box flex flex-col justify-between'>
 
             <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
@@ -32,6 +34,7 @@ function Home() {
 
           </div>
 
+          {/* Slider-Box */}
           <div className='Slider-Box flex flex-col justify-between'>
 
             <Slider_Box_Title title='مشاورین در دسترس' />
@@ -44,12 +47,15 @@ function Home() {
 
           </div>
 
+          <Banner_Box />
+
+          {/* Slider-Box */}
           <div className='Slider-Box flex flex-col justify-between'>
 
             <Slider_Box_Title title='محبوبترین کلینیک های پزشکی' />
 
             <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
-              <Slider dataKey="admin">
+              <Slider dataKey="clinic">
                 <Card_Slide />
               </Slider>
             </div>
