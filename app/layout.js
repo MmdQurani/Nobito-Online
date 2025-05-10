@@ -11,7 +11,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
 
-  const res = await fetch("http://localhost:4000/doctors");
+  const res = await fetch("http://localhost:4000/Nobito");
   const initialData = await res.json();
 
   return (

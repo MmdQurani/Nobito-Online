@@ -13,7 +13,7 @@ export function DataProvider({ children, initialData = null }) {
     if (!initialData) {
       const fetchData = async () => {
         try {
-          const res = await fetch("http://localhost:4000/doctors");
+          const res = await fetch("http://localhost:4000/Nobito");
           const result = await res.json();
           setData(result);
         } finally {

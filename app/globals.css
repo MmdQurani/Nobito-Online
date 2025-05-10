@@ -31,7 +31,7 @@
   --color-main-text-3: #757575;
   --color-sub-text: #B1B1B1;
   --color-primery-600: #1F7168;
-  --color-gray-50:#F1F1F1;
+  --color-gray-50: #F1F1F1;
 
   --font-Vazir: 'Vazir';
   --font-Dirooz: 'Dirooz';
@@ -40,7 +40,7 @@
 }
 
 @layer components {
-  .container{
+  .container {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
@@ -97,17 +97,29 @@ input::placeholder {
   background-color: var(--color-primery-600) !important;
 }
 
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: auto;
+  border-color: #ccc !important;
+  /* تغییر رنگ دکمه */
+  color: #aaa !important;
+  /* تغییر رنگ آیکون */
+}
+
+
 .swiper-slide {
-  width: auto; /* یا از flex استفاده کنید */
+  width: auto;
+  /* یا از flex استفاده کنید */
   flex-grow: 1;
 }
 
 
 
 .test-text {
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
-  width: 100%; /* یا مقدار مناسب برای باکس */
+  width: 100%;
+  /* یا مقدار مناسب برای باکس */
 }

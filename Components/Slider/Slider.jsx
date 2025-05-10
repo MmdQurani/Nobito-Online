@@ -22,7 +22,6 @@ export default function Slider() {
 
   const { data, loading, setData } = useContext(DataContext);
   const uniqueId = useId();
-  console.log(uniqueId)
 
   return (
     <>
@@ -41,7 +40,7 @@ export default function Slider() {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          {data.map(doctor =>
+          {data.doctors.map(doctor =>
             <SwiperSlide className="h-full">
               <Card_Slide {...doctor} />
             </SwiperSlide>
