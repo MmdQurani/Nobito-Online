@@ -25,7 +25,7 @@ function Home() {
             <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
 
             <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
-              <Slider>
+              <Slider dataKey="doctors">
                 <Card_Slide></Card_Slide>
               </Slider>
             </div>
@@ -37,7 +37,7 @@ function Home() {
             <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
 
             <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
-              <Slider>
+              <Slider dataKey="admin">
                 <Card_Slide></Card_Slide>
               </Slider>
             </div>

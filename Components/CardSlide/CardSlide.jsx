@@ -3,12 +3,12 @@ import Link from 'next/link'
 import React from 'react'
 import { MdOutlineLocationOn } from 'react-icons/md'
 
-function Card_Slide(doctor) {
+function Card_Slide(item) {
   return (
     <div className='Card-Slide h-full w-full flex flex-col justify-start gap-y-2.5 p-4'>
       <Slide_Image />
 
-      <Slide_Body {...doctor} />
+      <Slide_Body {...item} />
     </div>
   )
 }
@@ -21,24 +21,24 @@ export function Slide_Image({ srcImg }) {
   )
 }
 
-export function Slide_Body({doctor}) {
-  console.log(doctor.name)
+export function Slide_Body({item}) {
+  console.log(item.name)
   return (
     <div className='body-slide flex-1 flex flex-col justify-between' dir='rtl'>
 
       <div className='flex flex-row justify-between items-center mb-2'>
-        <Title_Card name={doctor.name} />
+        <Title_Card name={item.name} />
 
         <Star_Score />
       </div>
 
-      <PhysicianExpertiseAndPatientSatisfaction specialt={doctor.specialty} />
+      <PhysicianExpertiseAndPatientSatisfaction specialt={item.specialty} />
 
-      <Doctor_Specialty specialty={doctor.specialty} />
+      <Doctor_Specialty specialty={item.specialty} />
 
       <hr className='my-2.5 text-gray-200' />
 
-      <DoctorAddress address={doctor.address} />
+      <DoctorAddress address={item.address} />
 
     </div>
   )

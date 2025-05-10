@@ -12,16 +12,17 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
-import Card_Slide from '../CardSlide/CardSlide';
 import { SlArrowLeftCircle, SlArrowRightCircle } from 'react-icons/sl';
 
 import { useContext } from "react";
 import { DataContext } from '@/Context/Context';
 
-export default function Slider({ children }) {
+export default function Slider({ children, dataKey }) {
 
   const { data, loading, setData } = useContext(DataContext);
   const uniqueId = useId();
+
+  const sliderData = data[dataKey] || [];
 
   return (
     <>
@@ -40,11 +41,11 @@ export default function Slider({ children }) {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          {data.admin.map(doctor =>
+          {sliderData.map(item =>
             <SwiperSlide className="h-full">
               {/* <Card_Slide {...doctor} /> */}
               {React.Children.map(children, child =>
-                React.cloneElement(child, { doctor })
+                React.cloneElement(child, { item })
               )}
             </SwiperSlide>
           )}
