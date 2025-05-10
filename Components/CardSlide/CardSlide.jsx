@@ -21,7 +21,8 @@ export function Slide_Image({ srcImg }) {
   )
 }
 
-export function Slide_Body(doctor) {
+export function Slide_Body({doctor}) {
+  console.log(doctor.name)
   return (
     <div className='body-slide flex-1 flex flex-col justify-between' dir='rtl'>
 

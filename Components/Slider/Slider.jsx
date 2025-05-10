@@ -18,7 +18,7 @@ import { SlArrowLeftCircle, SlArrowRightCircle } from 'react-icons/sl';
 import { useContext } from "react";
 import { DataContext } from '@/Context/Context';
 
-export default function Slider() {
+export default function Slider({ children }) {
 
   const { data, loading, setData } = useContext(DataContext);
   const uniqueId = useId();
@@ -40,9 +40,12 @@ export default function Slider() {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          {data.doctors.map(doctor =>
+          {data.admin.map(doctor =>
             <SwiperSlide className="h-full">
-              <Card_Slide {...doctor} />
+              {/* <Card_Slide {...doctor} /> */}
+              {React.Children.map(children, child =>
+                React.cloneElement(child, { doctor })
+              )}
             </SwiperSlide>
           )}
         </Swiper>

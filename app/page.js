@@ -1,3 +1,4 @@
+import Card_Slide from '@/Components/CardSlide/CardSlide';
 import Slider from '@/Components/Slider/Slider';
 import Link from 'next/link';
 import React from 'react'
@@ -24,7 +25,9 @@ function Home() {
             <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
 
             <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
-              <Slider />
+              <Slider>
+                <Card_Slide></Card_Slide>
+              </Slider>
             </div>
 
           </div>
@@ -34,7 +37,9 @@ function Home() {
             <Slider_Box_Title title='محبوبترین پزشکان این ماه' />
 
             <div className='min-h-96 max-h-max py-1 my-8 container w-8xl mx-auto'>
-              <Slider />
+              <Slider>
+                <Card_Slide></Card_Slide>
+              </Slider>
             </div>
 
           </div>
