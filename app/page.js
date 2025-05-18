@@ -62,6 +62,50 @@ function Home() {
 
           </div>
 
+          <div className='Insurance-Box container w-8xl mx-auto' dir='rtl'>
+
+            {/* <div className='w-full h-full bg-white p-8'>
+
+              <div className='Content-Insurance grid grid-cols-14'>
+
+                <div className='xl:col-span-10 lg:col-span-8 col-span-14 lg:order-1 order-2 flex flex-col justify-around items-start pe-4'>
+                  <span className='text-3xl text-main-text-2 mb-8'>بیمه دکترتو در روزهای سخت همراه شماست</span>
+                  <p className='leading-8 text-sm text-sub-text mb-8'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد،</p>
+                  <button>click</button>
+                </div>
+
+                <div className='xl:col-span-4 lg:col-span-6 col-span-14 lg:order-2 order-1 bg-amber-400 flex justify-center items-center'>
+                  <img src='/images/Insurance/Insurance.png' className='object-contain w-full' />
+                </div>
+
+              </div>
+
+              <div className='Option-Insurance'></div>
+
+            </div> */}
+
+            <div className='w-full h-full bg-white py-12 px-8 rounded-xl'>
+
+              <div className='Content-Insurance flex lg:flex-row flex-col gap-y-8 gap-x-6'>
+
+                <div className='flex flex-col justify-around sm:items-start items-center lg:pe-4 flex-1 lg:order-1 order-2'>
+                  <span className='lg:text-3xl text-2xl text-main-text-2 mb-8'>بیمه دکترتو در روزهای سخت همراه شماست</span>
+                  <p className='leading-8 text-sm text-sub-text mb-8'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد،ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،</p>
+                  <button className='border-2 border-sub-text px-4 py-1 rounded-lg text-sub-text cursor-pointer hover:border-primery-600 hover:text-primery-600 sm:w-max w-full'>مطالعه بیشتر</button>
+                </div>
+
+                <div className='flex justify-center items-center lg:order-2 order-1'>
+                  <img src='/images/Insurance/Insurance.png' className='object-cover min-w-full max-h-[256] min-h-[256] sm:min-h-full rounded-xl' />
+                </div>
+
+              </div>
+
+              <div className='Option-Insurance'></div>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
