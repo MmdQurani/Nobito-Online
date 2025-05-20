@@ -31,7 +31,7 @@ export default async function RootLayout({ children }) {
 
           <Footer />
 
-          <button className="Message-Btn bg-primery-600 fixed bottom-10 left-10 rounded-full size-14 flex justify-center items-center cursor-pointer z-50">
+          <button className="Message-Btn bg-primery-600 fixed bottom-10 left-10 rounded-full size-14 flex justify-center items-center cursor-pointer z-45">
             <BsChatTextFill className="text-3xl text-white" />
           </button>
         </div>

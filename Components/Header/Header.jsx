@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
@@ -7,6 +9,13 @@ import { FaTelegram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
 function Header() {
+
+  const [activeMenu, setActiveMenu] = useState(false);
+
+  const activeMenuHandler = () => {
+    setActiveMenu(prev => !prev)
+  }
+
   return (
     <header className='h-max w-full sticky top-0 mx-auto bg-white border-b-1 border-sub-text/20 z-50'>
 
@@ -26,7 +35,7 @@ function Header() {
 
               <ProfBtnsBox />
 
-              <HamburgerMenu />
+              <HamburgerMenu activeMenuProp={{ activeMenu, setActiveMenu }} />
 
             </div>
           </nav>
@@ -54,7 +63,7 @@ function Header() {
               <Link href='/'>
                 <FaTelegram className='text-2xl text-sub-text hover:text-blue-400' />
               </Link>
-              
+
               <Link href='/'>
                 <FaLinkedin className='text-2xl text-sub-text hover:text-blue-500' />
               </Link>
@@ -64,8 +73,22 @@ function Header() {
           </nav>
 
         </div>
-
       </div>
+
+      <div>
+        {/* لایه تارکننده پس‌زمینه */}
+        {activeMenu && (
+          <div className="fixed inset-0 bg-black/10 backdrop-blur-xs z-40"></div>
+        )}
+
+        {/* منو */}
+        <div className={`lg:hidden ${activeMenu ? 'flex' : 'hidden'} bg-main-background w-[90%] sm:w-96 h-full fixed z-50 top-0 left-0`}>
+          <button className='cursor-pointer' onClick={activeMenuHandler}>
+            <IoMenu className='text-4xl text-sub-text hover:text-primery-600' />
+          </button> 
+        </div>
+      </div>
+
 
     </header>
   )
@@ -113,10 +136,15 @@ export function ProfBtnsBox() {
   )
 }
 
-export function HamburgerMenu() {
+export function HamburgerMenu({ activeMenuProp }) {
+
+  const activeMenuHandler = () => {
+    activeMenuProp.setActiveMenu(prev => !prev)
+  }
+
   return (
     <div className='lg:hidden flex justify-end'>
-      <button className='cursor-pointer'>
+      <button className='cursor-pointer' onClick={activeMenuHandler}>
         <IoMenu className='text-4xl text-sub-text hover:text-primery-600' />
       </button>
     </div>
