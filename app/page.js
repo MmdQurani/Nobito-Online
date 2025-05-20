@@ -187,7 +187,7 @@ export function Insurance_Box({ title, paragraph }) {
   return (
     <div className='Insurance-Box container w-8xl mx-auto' dir='rtl'>
 
-      <div className='w-full h-full bg-white py-12 px-8 rounded-xl'>
+      <div className='w-full h-full bg-white py-12 px-8 rounded-xl sm-shadow'>
 
         <div className='Content-Insurance flex lg:flex-row flex-col gap-y-8 gap-x-6 mb-12'>
 

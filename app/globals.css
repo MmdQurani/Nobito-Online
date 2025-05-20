@@ -123,3 +123,7 @@ input::placeholder {
   width: 100%;
   /* یا مقدار مناسب برای باکس */
 }
+
+.sm-shadow {
+  box-shadow: 0 0 10px #ecececf1;
+}
