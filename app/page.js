@@ -3,9 +3,11 @@ import Card_Slide from '@/Components/CardSlide/CardSlide';
 import Slider from '@/Components/Slider/Slider';
 import Link from 'next/link';
 import React from 'react'
+
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiSearchLine } from "react-icons/ri";
 import { SlArrowLeftCircle } from "react-icons/sl";
+import { BiSolidNotepad } from "react-icons/bi";
 
 function Home() {
   return (
@@ -62,49 +64,7 @@ function Home() {
 
           </div>
 
-          <div className='Insurance-Box container w-8xl mx-auto' dir='rtl'>
-
-            {/* <div className='w-full h-full bg-white p-8'>
-
-              <div className='Content-Insurance grid grid-cols-14'>
-
-                <div className='xl:col-span-10 lg:col-span-8 col-span-14 lg:order-1 order-2 flex flex-col justify-around items-start pe-4'>
-                  <span className='text-3xl text-main-text-2 mb-8'>بیمه دکترتو در روزهای سخت همراه شماست</span>
-                  <p className='leading-8 text-sm text-sub-text mb-8'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد،</p>
-                  <button>click</button>
-                </div>
-
-                <div className='xl:col-span-4 lg:col-span-6 col-span-14 lg:order-2 order-1 bg-amber-400 flex justify-center items-center'>
-                  <img src='/images/Insurance/Insurance.png' className='object-contain w-full' />
-                </div>
-
-              </div>
-
-              <div className='Option-Insurance'></div>
-
-            </div> */}
-
-            <div className='w-full h-full bg-white py-12 px-8 rounded-xl'>
-
-              <div className='Content-Insurance flex lg:flex-row flex-col gap-y-8 gap-x-6'>
-
-                <div className='flex flex-col justify-around sm:items-start items-center lg:pe-4 flex-1 lg:order-1 order-2'>
-                  <span className='lg:text-3xl text-2xl text-main-text-2 mb-8'>بیمه دکترتو در روزهای سخت همراه شماست</span>
-                  <p className='leading-8 text-sm text-sub-text mb-8'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد،ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،</p>
-                  <button className='border-2 border-sub-text px-4 py-1 rounded-lg text-sub-text cursor-pointer hover:border-primery-600 hover:text-primery-600 sm:w-max w-full'>مطالعه بیشتر</button>
-                </div>
-
-                <div className='flex justify-center items-center lg:order-2 order-1'>
-                  <img src='/images/Insurance/Insurance.png' className='object-cover min-w-full max-h-[256] min-h-[256] sm:min-h-full rounded-xl' />
-                </div>
-
-              </div>
-
-              <div className='Option-Insurance'></div>
-
-            </div>
-
-          </div>
+          <Insurance_Box title='بیمه دکترتو در روزهای سخت همراه شماست' paragraph='لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد،ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،' />
 
         </div>
 
@@ -222,5 +182,51 @@ export function Slider_Box_Title({ href = '/', title }) {
   )
 }
 // * Slider_Box
+
+export function Insurance_Box({ title, paragraph }) {
+  return (
+    <div className='Insurance-Box container w-8xl mx-auto' dir='rtl'>
+
+      <div className='w-full h-full bg-white py-12 px-8 rounded-xl'>
+
+        <div className='Content-Insurance flex lg:flex-row flex-col gap-y-8 gap-x-6 mb-12'>
+
+          <div className='flex flex-col justify-around sm:items-start items-center lg:pe-4 flex-1 lg:order-1 order-2'>
+            <span className='lg:text-3xl text-2xl text-main-text-2 mb-8'>{title}</span>
+            <p className='leading-8 text-sm text-sub-text mb-8'>{paragraph}</p>
+            <button className='border-2 border-sub-text px-4 py-1 rounded-lg text-sub-text cursor-pointer hover:border-primery-600 hover:text-primery-600 sm:w-max w-full'>مطالعه بیشتر</button>
+          </div>
+
+          <div className='flex justify-center items-center lg:order-2 order-1'>
+            <img src='/images/Insurance/Insurance.png' className='object-cover min-w-full max-h-[256] min-h-[256] sm:min-h-full rounded-xl' />
+          </div>
+
+        </div>
+
+        <div className='Option-Insurance w-full grid grid-cols-12 gap-6'>
+
+          <Option_Insurance_Card />
+          <Option_Insurance_Card />
+          <Option_Insurance_Card />
+
+        </div>
+
+      </div>
+
+    </div>
+  )
+}
+
+export function Option_Insurance_Card() {
+  return (
+    <div className='Option-Insurance-Card lg:col-span-4 col-span-12 w-full min-h-52 max-h-max py-4'>
+      <div className='w-full h-full flex flex-col lg:items-start items-center lg:text-start text-center justify-around gap-y-6'>
+        <BiSolidNotepad className='bg-primery-600 size-12 p-2 text-white rounded-md' />
+        <span className='text-xl text-main-text-2'>بیمه دکترتو در روزهای سخت همراه</span>
+        <p className='text-sm text-sub-text leading-7'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و بااستفاده از طراحان گرافیک است.</p>
+      </div>
+    </div>
+  )
+}
 
 export default Home
