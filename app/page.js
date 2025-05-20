@@ -183,6 +183,8 @@ export function Slider_Box_Title({ href = '/', title }) {
 }
 // * Slider_Box
 
+
+// * Insurance_Box
 export function Insurance_Box({ title, paragraph }) {
   return (
     <div className='Insurance-Box container w-8xl mx-auto' dir='rtl'>
@@ -228,5 +230,7 @@ export function Option_Insurance_Card() {
     </div>
   )
 }
+// * Insurance_Box
+
 
 export default Home
