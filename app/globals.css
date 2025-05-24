@@ -127,3 +127,11 @@ input::placeholder {
 .sm-shadow {
   box-shadow: 0 0 10px #ecececf1;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE و Edge */
+  scrollbar-width: none;     /* Firefox */
+}
