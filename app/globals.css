@@ -54,7 +54,6 @@ body {
 
 input::placeholder {
   color: var(--color-sub-text) !important;
-  font-size: 12px !important;
 }
 
 .search-input::placeholder {
@@ -131,7 +130,10 @@ input::placeholder {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE و Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE و Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
