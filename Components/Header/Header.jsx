@@ -65,7 +65,7 @@ function Header() {
 
       {/* منوی اسلایدینگ از سمت راست */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full bg-main-background w-[70%] sm:w-96 z-50 transform transition-transform duration-300 px-4 ${activeMenu ? "translate-x-0" : "translate-x-full"
+        className={`lg:hidden fixed top-0 right-0 h-full bg-main-background w-[70%] flex flex-col sm:w-96 z-50 transform transition-transform px-4 duration-300 ${activeMenu ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* محتوای منو به دلخواه شما */}
@@ -80,36 +80,38 @@ function Header() {
           </div>
         </div>
 
-        <hr className='text-sub-text/40' />
+        <hr className='my-2 text-sub-text/30' />
 
         <div className="body-hamburger-menu h-full w-full top-0 overflow-y-auto hide-scrollbar" dir='rtl'>
           <ul>
-            <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
-              <Link href="/">نوبت دهی مطب</Link>
-            </li>
-            <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
-              <Link href="/">خدمات</Link>
-            </li>
-            <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
-              <Link href="/">مشاوره آنلاین</Link>
-            </li>
-            <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
-              <Link href="/">مجله سلامت</Link>
-            </li>
-            <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
-              <Link href="/">نیکوکاری</Link>
-            </li>
-            <hr className='text-sub-text/40' />
-            <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
-              <Link href="/">درباره ما</Link>
-            </li>
-            <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
-              <Link href="/">تماس با ما</Link>
-            </li>
-            <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
-              <Link href="/">سوالات متداول</Link>
-            </li>
+            <HamburgerMenuItem title='نوبت دهی مطب' />
+            <HamburgerMenuItem title='خدمات' />
+            <HamburgerMenuItem title='مشاوره آنلاین' />
+            <HamburgerMenuItem title='مجله سلامت' />
+            <HamburgerMenuItem title='نیکوکاری' />
+            <hr className='my-2 text-sub-text/30' />
+            <HamburgerMenuItem title='درباره ما' />
+            <HamburgerMenuItem title='تماس با ما' />
+            <HamburgerMenuItem title='سوالات متداول' />
           </ul>
+        </div>
+
+        <div className='sticky bottom-0 min-h-24 flex flex-col justify-between bg-main-background'>
+          <div className='h-full flex flex-row justify-center items-center gap-x-6'>
+            <Link href="/">
+              <FaInstagram className="text-2xl text-sub-text hover:text-pink-500" />
+            </Link>
+            <Link href="/">
+              <FaTelegram className="text-2xl text-sub-text hover:text-blue-400" />
+            </Link>
+            <Link href="/">
+              <FaLinkedin className="text-2xl text-sub-text hover:text-blue-500" />
+            </Link>
+          </div>
+          <hr className='my-2 text-sub-text/30' />
+          <div className='h-full flex flex-row justify-center items-center'>
+            <span className='text-xs text-sub-text'>پلتفرم آنلاین رزرو نوبت</span>
+          </div>
         </div>
       </div>
     </header>
@@ -171,6 +173,14 @@ export function HamburgerMenu({ activeMenuProp }) {
         <IoMenu className='text-4xl text-sub-text hover:text-primery-600' />
       </button>
     </div>
+  )
+}
+
+export function HamburgerMenuItem({ title }) {
+  return (
+    <li className="my-6 text-sm text-main-text-3 hover:text-primery-600">
+      <Link href="/">{title}</Link>
+    </li>
   )
 }
 
