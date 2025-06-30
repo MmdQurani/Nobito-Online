@@ -1,6 +1,9 @@
 import React from 'react'
 import { MdOutlineLocationOn } from 'react-icons/md'
 import { RiSearchLine } from 'react-icons/ri'
+import { CiFilter } from "react-icons/ci";
+import { Medical_Consultation_Method } from '@/Components/Medical_Consultation_Method/Mediacl_Consultation_Method_Item';
+// import { LuPhone } from "react-icons/lu";
 
 // todo نوبت دهی مطب
 function TurnRatings() {
@@ -10,7 +13,22 @@ function TurnRatings() {
       <Serach_Box_Turn_Ratings />
 
       <div className='Content_Box_Turn_Ratings w-full grid grid-cols-12 gap-x-8' dir='rtl'>
-        <div className='col-span-4 bg-white rounded-lg shadow-xs px-4 py-8'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates voluptatum, aperiam nostrum consequatur aliquam dignissimos assumenda architecto, officiis ut similique eveniet itaque rem laborum. Autem sed ad veritatis pariatur fugit aliquid? Earum labore esse unde distinctio? Quas recusandae excepturi non modi laudantium veniam in optio, ipsam impedit aliquam! Odit quae nostrum, quam id quas tempore consequatur illum suscipit inventore accusantium ipsam laboriosam fugit reiciendis. Expedita culpa omnis quisquam a magnam, voluptates totam quibusdam quasi. Neque perspiciatis nulla, iste consequatur iusto quaerat corporis esse quam, aspernatur quos unde officia commodi cum ullam ipsam officiis quibusdam veniam dignissimos omnis laborum asperiores rem.</div>
+
+        <div className='filter-box col-span-4 bg-white rounded-lg shadow-xs px-4 py-8'>
+
+          {/* تایتل باکس فیلترکننده */}
+          <div className='title-filter-box flex flex-row justify-between'>
+            <div className='flex flex-row items-center gap-1 text-main-text-2 '>
+              <CiFilter className='text-4xl ' />
+              <span className='text-md'>فیلتر کردن</span>
+            </div>
+            <button className='text-xs text-sub-text cursor-pointer'>حذف فیلترها</button>
+          </div>
+
+          <Medical_Consultation_Method />
+
+        </div>
+
         <div className='col-span-8 bg-blue-500'>left</div>
       </div>
 
@@ -40,5 +58,6 @@ export function Serach_Box_Turn_Ratings() {
     </div>
   )
 }
+
 
 export default TurnRatings
