@@ -3,6 +3,7 @@ import { MdOutlineLocationOn } from 'react-icons/md'
 import { RiSearchLine } from 'react-icons/ri'
 import { CiFilter } from "react-icons/ci";
 import { Medical_Consultation_Method } from '@/Components/Medical_Consultation_Method/Mediacl_Consultation_Method_Item';
+import { SlArrowDown } from "react-icons/sl";
 // import { LuPhone } from "react-icons/lu";
 
 // todo نوبت دهی مطب
@@ -26,6 +27,53 @@ function TurnRatings() {
           </div>
 
           <Medical_Consultation_Method />
+
+          <hr className='mt-10 text-gray-200' />
+
+          <div className="mt-6">
+            <label
+              className="block mb-2 text-sm font-medium text-gray-700"
+            >
+              مرتب‌سازی بر اساس
+            </label>
+
+            <div className="relative">
+              <select
+                className="
+            w-full
+            py-2
+            px-3
+            border
+            border-gray-300
+            bg-white
+            rounded-md
+            shadow-sm
+            appearance-none
+            focus:outline-none
+            focus:ring-1
+            focus:border-gray-100/20  /* مرز در حالت فوکوس مثل حالت عادی */
+          "
+              >
+                <option value="all">همه</option>
+                <option value="rating-high">بیشترین رتبه</option>
+                <option value="rating-low">کمترین رتبه</option>
+                <option value="alphabetical">الفبایی</option>
+              </select>
+
+              <SlArrowDown
+                className="
+            pointer-events-none
+            absolute
+            left-3
+            top-1/2
+            transform
+            -translate-y-1/2
+            text-gray-500
+          "
+                size={20}
+              />
+            </div>
+          </div>
 
         </div>
 
