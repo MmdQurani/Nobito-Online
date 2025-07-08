@@ -1,13 +1,19 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import { MdOutlineLocationOn } from 'react-icons/md'
 import { RiSearchLine } from 'react-icons/ri'
 import { CiFilter } from "react-icons/ci";
 import { Medical_Consultation_Method } from '@/Components/Medical_Consultation_Method/Mediacl_Consultation_Method_Item';
 import { SlArrowDown } from "react-icons/sl";
+import GenderFilter from '@/Components/GenderFilter/GenderFilter';
 // import { LuPhone } from "react-icons/lu";
 
 // todo نوبت دهی مطب
 function TurnRatings() {
+
+  const [gender, setGender] = useState('all');
+
   return (
     <div className='TurnRatings container w-8xl mx-auto mt-12 flex flex-col'>
 
@@ -20,7 +26,7 @@ function TurnRatings() {
           {/* تایتل باکس فیلترکننده */}
           <div className='title-filter-box flex flex-row justify-between'>
             <div className='flex flex-row items-center gap-1 text-main-text-2 '>
-              <CiFilter className='text-4xl ' />
+              <CiFilter className='text-4xl' />
               <span className='text-md'>فیلتر کردن</span>
             </div>
             <button className='text-xs text-sub-text cursor-pointer'>حذف فیلترها</button>
@@ -30,50 +36,63 @@ function TurnRatings() {
 
           <hr className='mt-10 text-gray-200' />
 
-          <div className="mt-6">
-            <label
-              className="block mb-2 text-sm font-medium text-gray-700"
-            >
-              مرتب‌سازی بر اساس
-            </label>
+          <Select_List_Filter_Box title='تخصص' >
 
-            <div className="relative">
-              <select
-                className="
-            w-full
-            py-2
-            px-3
-            border
-            border-gray-300
-            bg-white
-            rounded-md
-            shadow-sm
-            appearance-none
-            focus:outline-none
-            focus:ring-1
-            focus:border-gray-100/20  /* مرز در حالت فوکوس مثل حالت عادی */
-          "
-              >
+            <option value="all">همه</option>
+            <option value="rating-high">بیشترین رتبه</option>
+            <option value="rating-low">کمترین رتبه</option>
+            <option value="alphabetical">الفبایی</option>
+          </Select_List_Filter_Box>
+
+          <hr className='mt-10 text-gray-200' />
+
+          <Select_List_Filter_Box title='خدمات' >
+
+            <option value="all">همه</option>
+            <option value="rating-high">بیشترین رتبه</option>
+            <option value="rating-low">کمترین رتبه</option>
+            <option value="alphabetical">الفبایی</option>
+          </Select_List_Filter_Box>
+
+          <hr className='mt-10 text-gray-200' />
+
+          <div className='grid grid-cols-12 gap-x-4'>
+
+            <div className='col-span-6'>
+              <Select_List_Filter_Box title='شهر' >
+
                 <option value="all">همه</option>
                 <option value="rating-high">بیشترین رتبه</option>
                 <option value="rating-low">کمترین رتبه</option>
                 <option value="alphabetical">الفبایی</option>
-              </select>
-
-              <SlArrowDown
-                className="
-            pointer-events-none
-            absolute
-            left-3
-            top-1/2
-            transform
-            -translate-y-1/2
-            text-gray-500
-          "
-                size={20}
-              />
+              </Select_List_Filter_Box>
             </div>
+
+            <div className='col-span-6'>
+              <Select_List_Filter_Box title='استان' >
+
+                <option value="all">همه</option>
+                <option value="rating-high">بیشترین رتبه</option>
+                <option value="rating-low">کمترین رتبه</option>
+                <option value="alphabetical">الفبایی</option>
+              </Select_List_Filter_Box>
+            </div>
+
           </div>
+
+          <hr className='mt-10 text-gray-200' />
+
+          <Select_List_Filter_Box title='بیمه' >
+
+            <option value="all">همه</option>
+            <option value="rating-high">بیشترین رتبه</option>
+            <option value="rating-low">کمترین رتبه</option>
+            <option value="alphabetical">الفبایی</option>
+          </Select_List_Filter_Box>
+
+          <hr className='mt-10 text-gray-200' />
+
+          <GenderFilter onChange={(g) => setGender(g)} />
 
         </div>
 
@@ -104,6 +123,57 @@ export function Serach_Box_Turn_Ratings() {
 
       </div>
     </div>
+  )
+}
+
+export function Select_List_Filter_Box({ children, title }) {
+  return (
+    <>
+      <div className="mt-6">
+        <label className="block mb-2 text-lg font-medium text-gray-700">
+          {title}
+        </label>
+
+        <div className="relative">
+          <select className="
+            w-full
+            py-2
+            px-3
+            border
+            border-gray-300
+            bg-white
+            rounded-md
+            shadow-sm
+            appearance-none
+            focus:outline-none
+            focus:ring-1
+            focus:border-gray-100/20  /* مرز در حالت فوکوس مثل حالت عادی */
+            cursor-pointer
+            text-sm
+            text-main-text-2
+            font-Dirooz
+          "
+          >
+
+            {children}
+
+          </select>
+
+          <SlArrowDown
+            className="
+            pointer-events-none
+            absolute
+            left-3
+            top-1/2
+            transform
+            -translate-y-1/2
+            text-gray-500
+          "
+            size={20}
+          />
+        </div>
+      </div>
+    </>
   )
 }
 
