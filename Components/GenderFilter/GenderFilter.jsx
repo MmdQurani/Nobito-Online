@@ -1,4 +1,5 @@
-import { useState } from 'react';
+'use client'
+import React, { useState } from "react";
 
 const genderLabels = {
   all: 'هردو',
@@ -42,7 +43,14 @@ export default function GenderFilter({ onChange }) {
                   <span className="w-2 h-2 bg-white rounded-full" />
                 )}
               </span>
-              <span className="text-sm text-sub-text">{label}</span>
+
+              <span className={`text-sm ${
+                (isActive
+                  ? 'text-primery-600'
+                  : 'text-sub-text'
+                )
+              }`}>{label}</span>
+              
             </button>
           );
         })}
