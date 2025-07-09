@@ -6,6 +6,7 @@ import { Medical_Consultation_Method } from '@/Components/Medical_Consultation_M
 import { SlArrowDown } from "react-icons/sl";
 import GenderFilter from '@/Components/GenderFilter/GenderFilter';
 import Filtering_TrunRatings from '@/Components/Filtering_TrunRatings/Filtering_TrunRatings';
+import CategoryFilter from '@/Components/CategoryFilter/CategoryFilter';
 // import { LuPhone } from "react-icons/lu";
 
 // todo نوبت دهی مطب
@@ -20,7 +21,10 @@ function TurnRatings() {
 
         <Filtering_TrunRatings />
 
-        <div className='lg:col-span-8 col-span-12 bg-blue-500'>left</div>
+        <div className="Turn_Ratings_Cards lg:col-span-8 col-span-12 p-4 rounded-lg">
+          <CategoryFilter />
+        </div>
+
       </div>
 
     </div>
